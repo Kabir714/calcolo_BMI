@@ -1,0 +1,186 @@
+/* ==========================================================================
+   RESET & REGOLAZIONI GENERALI
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F1F3F5;
+    color: #1F2328;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   TITOLI E CONTENITORE CENTRATO
+   ========================================================================== */
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1F2328;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ==========================================================================
+   BOX BIANCO DEL FORM (form.html)
+   ========================================================================== */
+.box {
+    background-color: #FFFFFF;
+    width: 360px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1F2328;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #E1E4E8;
+    border-radius: 8px;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #1F2328;
+}
+
+.form-group input:focus {
+    border-color: #1F2328;
+}
+
+button {
+    width: 100%;
+    background-color: #1F2328;
+    color: #FFFFFF;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   CARD DEL RISULTATO (bmi.php)
+   ========================================================================== */
+.card {
+    width: 360px;
+    padding: 24px;
+    border-radius: 12px;
+    border-width: 3px;
+    border-style: solid;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-nome {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1F2328;
+}
+
+.card-dati {
+    font-size: 13px;
+    color: #57606A;
+    margin-bottom: 16px;
+}
+
+.card-bmi {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: #1F2328;
+}
+
+.card-fascia {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Link sotto la card */
+.link-nuovo {
+    color: #57606A;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.link-nuovo:hover {
+    color: #1F2328;
+}
+
+/* ==========================================================================
+   LE QUATTRO CLASSI DELLE CARD (Colori esatti dalle specifiche)
+   ========================================================================== */
+
+/* 1. Sottopeso (< 18.5) */
+.card.sottopeso {
+    background-color: #E3EEF9;
+    border-color: #2F6FB3;
+}
+.card.sottopeso .card-fascia {
+    color: #2F6FB3;
+}
+
+/* 2. Normopeso (18.5 - 24.9) */
+.card.normopeso {
+    background-color: #E3F4E6;
+    border-color: #256D34;
+}
+.card.normopeso .card-fascia {
+    color: #256D34;
+}
+
+/* 3. Sovrappeso (25 - 29.9) */
+.card.sovrappeso {
+    background-color: #FCEBD7;
+    border-color: #9A4F06;
+}
+.card.sovrappeso .card-fascia {
+    color: #9A4F06;
+}
+
+/* 4. Obesità (>= 30) */
+.card.obesita {
+    background-color: #FBE2E2;
+    border-color: #B32D2D;
+}
+.card.obesita .card-fascia {
+    color: #B32D2D;
+}
